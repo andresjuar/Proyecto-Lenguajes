@@ -551,6 +551,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d9b03856d038f048918924158acbb11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 851695391}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d9b03856d038f048918924158acbb11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 851695393}
   m_SourcePrefab: {fileID: 100100000, guid: 0d9b03856d038f048918924158acbb11, type: 3}
 --- !u!1 &851695390 stripped
 GameObject:
@@ -579,6 +582,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &851695393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851695390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d227ccbf368e64746b8f8b4d8959c3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  rival: {fileID: 0}
+  gameAnimator: {fileID: 0}
+  speed: 2
+  ringLimit: 4.5
+  hpMax: 100
+  damage: 10
+  hitRange: 1.5
+  hitTime: 0.5
+  recoverTime: 1
+  modoPrueba: 1
+  hp: 0
 --- !u!1 &1024830237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d38885f6b83de734f97c778442ad0d2d, type: 3}

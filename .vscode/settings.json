@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Proyecto-Lenguajes.slnx"
+    "dotnet.defaultSolution": "Proyecto Lenguajes.slnx"
 }

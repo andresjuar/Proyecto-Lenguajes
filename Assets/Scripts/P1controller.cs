@@ -21,18 +21,21 @@ public class P1Controller : MonoBehaviour
     public float hitTime = 0.5f;
     public float recoverTime = 1f;
 
-    public bool modoPrueba = true;      // H = h, E = e, K = hp a 0
-
     public int hp;
     bool hit;           // símbolo h
     bool dodged;        // símbolo e
     float timer;        // símbolo t
     int lastState;
 
+    Vector3 startPos;
+    Quaternion startRot;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         hp = hpMax;
+        startPos = transform.position;
+        startRot = transform.rotation;
     }
 
     void Update()
@@ -53,13 +56,6 @@ public class P1Controller : MonoBehaviour
         bool dPressed = Keyboard.current.dKey.isPressed;
         bool fPressed = Keyboard.current.fKey.isPressed;
         bool gPressed = Keyboard.current.gKey.isPressed;
-
-        if (modoPrueba)
-        {
-            if (Keyboard.current.hKey.wasPressedThisFrame) hit = true;
-            if (Keyboard.current.eKey.wasPressedThisFrame) dodged = true;
-            if (Keyboard.current.kKey.wasPressedThisFrame) hp = 0;
-        }
 
         bool h = hit;
         bool e = dodged;
@@ -281,5 +277,17 @@ public class P1Controller : MonoBehaviour
         p.x = Mathf.Clamp(p.x, -ringLimit, ringLimit);
         p.z = Mathf.Clamp(p.z, -ringLimit, ringLimit);
         transform.position = p;
+    }
+
+    // Reinicio del autómata a q0 (lo llama el GameController con R)
+    public void Reiniciar()
+    {
+        hp = hpMax;
+        hit = false;
+        dodged = false;
+        timer = 0f;
+        lastState = 0;
+        transform.SetPositionAndRotation(startPos, startRot);
+        animator.Rebind();      // regresa al estado default (idle) con State = 0
     }
 }

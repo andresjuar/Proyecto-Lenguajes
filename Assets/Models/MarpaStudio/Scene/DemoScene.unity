@@ -37247,7 +37247,7 @@ MonoBehaviour:
   damage: 10
   hitRange: 1.5
   hitTime: 0.5
-  recoverTime: 1
+  recoverTime: 4
   hp: 0
 --- !u!4 &851695394 stripped
 Transform:
@@ -45705,7 +45705,7 @@ Animator:
   m_GameObject: {fileID: 1024830237}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 64d154dfebf3eda40871756fca6a87cf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0944919f8717e5048af97dcae5c68632, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -45737,7 +45737,7 @@ MonoBehaviour:
   damage: 10
   hitRange: 1.5
   hitTime: 0.5
-  recoverTime: 1
+  recoverTime: 4
   hp: 0
 --- !u!1001 &1027696414
 PrefabInstance:

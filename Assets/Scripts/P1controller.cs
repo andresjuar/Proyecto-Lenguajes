@@ -19,7 +19,7 @@ public class P1Controller : MonoBehaviour
     public int damage = 10;
     public float hitRange = 1.5f;
     public float hitTime = 0.5f;
-    public float recoverTime = 1f;
+    public float recoverTime = 4f;
 
     public int hp;
     bool hit;           // símbolo h

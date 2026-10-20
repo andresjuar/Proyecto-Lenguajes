@@ -14,7 +14,7 @@ public class P1Controller : MonoBehaviour
     public Animator gameAnimator;       // Animator del GameController (opcional)
 
     public float speed = 2f;
-    public float ringLimit = 4.5f;
+    public float ringLimit = 3f;
     public int hpMax = 100;
     public int damage = 10;
     public float hitRange = 1.5f;

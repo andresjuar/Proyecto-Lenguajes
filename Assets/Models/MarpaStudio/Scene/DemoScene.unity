@@ -7856,6 +7856,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d38885f6b83de734f97c778442ad0d2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1024830239}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d38885f6b83de734f97c778442ad0d2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1024830241}
   m_SourcePrefab: {fileID: 100100000, guid: d38885f6b83de734f97c778442ad0d2d, type: 3}
 --- !u!1001 &182109742
 PrefabInstance:
@@ -37233,19 +37236,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 851695390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d227ccbf368e64746b8f8b4d8959c3b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 308e19c182358c647befe3ae4c7a7c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  rival: {fileID: 0}
-  gameAnimator: {fileID: 0}
+  rival: {fileID: 1024830237}
+  gameAnimator: {fileID: 1795245692}
   speed: 2
-  ringLimit: 4.5
+  ringLimit: 3
   hpMax: 100
   damage: 10
   hitRange: 1.5
   hitTime: 0.5
   recoverTime: 1
-  modoPrueba: 1
   hp: 0
 --- !u!4 &851695394 stripped
 Transform:
@@ -45703,7 +45705,7 @@ Animator:
   m_GameObject: {fileID: 1024830237}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 05ecec71a0b3ddd4aadd402d61a50f0b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 64d154dfebf3eda40871756fca6a87cf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -45715,6 +45717,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1024830241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024830237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3327b5e2e31e86c499a173c03dcb0843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  rival: {fileID: 851695390}
+  gameAnimator: {fileID: 1795245692}
+  speed: 2
+  ringLimit: 3
+  hpMax: 100
+  damage: 10
+  hitRange: 1.5
+  hitTime: 0.5
+  recoverTime: 1
+  hp: 0
 --- !u!1001 &1027696414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78154,6 +78178,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6448171805470960658, guid: 6a9598db077c94d458cb31ba09a02fbd, type: 3}
   m_PrefabInstance: {fileID: 1791555057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1795245690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795245691}
+  - component: {fileID: 1795245692}
+  - component: {fileID: 1795245693}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795245691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795245690}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1795245692
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795245690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 136eff62cd2955145be6aa221bf82567, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1795245693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795245690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ef743b1403f6146a55d2471d9b26b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  p1: {fileID: 851695393}
+  p2: {fileID: 1024830241}
+  countdownTime: 3
 --- !u!1001 &1797952690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95998,6 +96092,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1795245691}
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1054898888}

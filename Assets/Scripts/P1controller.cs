@@ -29,6 +29,16 @@ public class P1Controller : MonoBehaviour
 
     Vector3 startPos;
     Quaternion startRot;
+    void lookAtRival()
+    {
+        if (rival == null) return;
+
+        Vector3 dir = rival.transform.position - transform.position;
+        dir.y = 0f; // solo girar en horizontal
+
+        if (dir.sqrMagnitude > 0.001f)
+            transform.rotation = Quaternion.LookRotation(dir);
+    }
 
     void Start()
     {
@@ -40,6 +50,7 @@ public class P1Controller : MonoBehaviour
 
     void Update()
     {
+        lookAtRival();
         // Solo se juega mientras el réferi está en "pelea" (estado 2)
         if (gameAnimator != null && gameAnimator.GetInteger("State") != 2)
         {
